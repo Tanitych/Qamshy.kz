@@ -282,7 +282,7 @@ header {
 }
 .header__nav {
   transition: all ease 0.3s;
-  overflow-y: scroll;
+
   scrollbar-color: #58a0c8 #ffffff; /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-width: thin; /* толщина */
   &::-webkit-scrollbar {
@@ -307,6 +307,7 @@ header {
     background-color: #ffffff;
     top: -100%;
     left: 0;
+    overflow-y: scroll;
   }
   ul {
     display: flex;
