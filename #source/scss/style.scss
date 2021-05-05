@@ -696,7 +696,8 @@ header {
   }
   .info {
     display: flex;
-
+    flex-wrap: nowrap;
+    white-space: nowrap;
     .time {
       font-weight: 600;
       font-size: 12px;
@@ -849,8 +850,9 @@ header {
   }
   .info {
     display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     @media (max-width: 365px) {
-      flex-direction: column;
     }
     .time {
       font-weight: 600;
@@ -874,6 +876,50 @@ header {
       line-height: 18px;
 
       color: #efeff7;
+    }
+  }
+  &.video__text {
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+
+      color: #ffffff;
+    }
+    .longest {
+      font-size: 12px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      color: #58a0c8;
+      svg {
+        margin-right: 3px;
+      }
+    }
+    .time__speciality {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      .time {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+
+        margin-right: 7px;
+
+        color: #fa3723;
+      }
+      .speciality {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+
+        /* Gray */
+
+        color: #efeff7;
+      }
     }
   }
 }
@@ -1081,8 +1127,12 @@ header {
     max-width: 100%;
     width: 100%;
   }
+  .info {
+    .photo__icon {
+      margin-right: 3px;
+    }
+  }
 }
-
 //video__block
 
 .video__subnews__block {
@@ -1134,7 +1184,6 @@ header {
         display: flex;
         align-items: center;
         margin-right: 4px;
-        margin-bottom: 7px;
         color: #fa3723;
       }
       .speciality {
@@ -1170,6 +1219,7 @@ header {
       display: flex;
       align-items: center;
       color: #58a0c8;
+
       svg {
         margin-right: 4px;
       }
@@ -1182,6 +1232,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  max-width: 937px;
   .tabs__link {
     margin: 0px 0px 0px 0px;
   }
@@ -1215,10 +1266,23 @@ header {
   @media (max-width: 800px) {
     flex-direction: column;
   }
+  .amount__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+
+    /* red */
+
+    color: #fa3723;
+  }
 }
 
 .video__news__right {
   width: 22%;
+  margin-bottom: 20px;
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -1547,6 +1611,8 @@ footer {
     .info {
       display: flex;
       align-items: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
       .time {
         font-weight: normal;
         font-size: 12px;
