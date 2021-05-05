@@ -1104,6 +1104,9 @@ header {
   .svg__tab {
     margin-left: 25px;
     transition: all ease 0.3s;
+    &.section {
+      margin-left: 9px;
+    }
   }
   &:hover .svg__tab {
     transform: translateX(5px);
