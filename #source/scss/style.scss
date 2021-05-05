@@ -978,8 +978,11 @@ header {
 }
 .subnews__block__tabs {
   max-width: 282px;
+  min-width: 282px;
+  margin-bottom: 30px;
   @media (max-width: 700px) {
-    max-width: 190px;
+    max-width: 231px;
+    min-width: unset;
   }
   @media (max-width: 560px) {
     max-width: unset;
@@ -1429,5 +1432,101 @@ footer {
     font-size: 12px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.tabs__content2 {
+  .tabs__item2 {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.tabs__nav2 {
+  display: flex;
+  margin-bottom: 15px;
+  .tabs__nav__btn2 {
+    background-color: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 5px;
+    padding: 2px 5px;
+    &.active {
+      border: 1px solid #fa3723;
+      color: #000000;
+    }
+  }
+}
+
+.tabs__item2__block {
+  display: flex;
+  border-bottom: 1px solid #efeff7;
+  padding: 0px 0px 9px 0px;
+  margin: 0px 0px 15px 0px;
+  img {
+    max-width: 86px;
+    max-width: 86px;
+    max-height: 60px;
+    min-height: 60px;
+    margin-right: 7px;
+  }
+  .content {
+    .text {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 120%;
+      color: #000000;
+      margin-bottom: 15px;
+      max-height: 43px;
+      max-width: 182px;
+      overflow: hidden;
+      @media (max-width: 560px) {
+        max-width: unset;
+      }
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      .time {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 120%;
+
+        /* Blue */
+
+        color: #58a0c8;
+        margin-right: 10px;
+      }
+      .play {
+        margin-right: 4px;
+      }
+      .longest {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.3);
+        margin-right: 10px;
+      }
+      .earpods {
+        margin-right: 4px;
+      }
+      .amount {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 120%;
+        color: #58a0c8;
+      }
+    }
   }
 }
