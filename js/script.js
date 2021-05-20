@@ -11,7 +11,6 @@ $(document).ready(function () {
     });
 });
 $(".toggle__menu").hide();
-
 $('.drop__language').click(function (event) {
     $('.drop__language, .drop__language__content').toggleClass('show');
 
@@ -29,7 +28,6 @@ window.onclick = function (event) {
         }
     }
 };
-
 $('.search__btn').click(function (event) {
     $('.search__btn, .search__header').toggleClass('show');
 
@@ -45,26 +43,21 @@ tabsBtn.forEach(function (item) {
         let currentBtn = item;
         let tabId = currentBtn.getAttribute("data-tab");
         let currentTab = document.querySelector(tabId);
-
         if (!currentBtn.classList.contains("active")) {
             tabsBtn.forEach(function (item) {
                 item.classList.remove("active");
             });
-
             tabsItems.forEach(function (item) {
                 item.classList.remove("active");
             });
-
             currentBtn.classList.add("active");
             currentTab.classList.add("active");
         }
     });
 });
-
 document.querySelector('.tabs__nav__btn:nth-child(1)').click();
 
 //tabs2
-
 const tabsBtn2 = document.querySelectorAll(".tabs__nav__btn2");
 const tabsItems2 = document.querySelectorAll(".tabs__item2");
 
@@ -88,5 +81,29 @@ tabsBtn2.forEach(function (item) {
         }
     });
 });
-
 document.querySelector('.tabs__nav__btn2:nth-child(1)').click();
+
+
+//Adaptive functions
+$(window).resize(function (event) {
+    adaptive_function();
+});
+function adaptive_header(w, h) {
+    var headerMenu = $('.append-tabs_block');
+    var headerLang = $('.subnews__block__tabs');
+    if (w < 767) {
+        if (!headerLang.hasClass('done')) {
+            headerLang.addClass('done').appendTo(headerMenu);
+        }
+    } else {
+        if (headerLang.hasClass('done')) {
+            headerLang.removeClass('done').prependTo($('.prepend-tabs-block'));
+        }
+    }
+}
+function adaptive_function() {
+    var w = $(window).outerWidth();
+    var h = $(window).outerHeight();
+    adaptive_header(w, h);
+}
+adaptive_function();
